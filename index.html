@@ -49,7 +49,7 @@
 <body>
 <main>
   <h1>Tarolya Gizlilik Politikası</h1>
-  <p class="date">Son güncelleme: 6 Kasım 2026</p>
+  <p class="date">Son güncelleme: 7 Kasım 2026</p>
 
   <p>Tarolya (&laquo;uygulama&raquo;), Velaris Labs tarafından geliştirilmiştir. Bu politika,
   uygulamanın hangi verileri işlediğini ve neden işlediğini açıklar.</p>
@@ -58,8 +58,11 @@
     <strong>Kısaca</strong>
     <ul>
       <li>Hesap açmanız gerekmez; uygulamanın tamamı girişsiz çalışır.</li>
-      <li>Adınız, doğum tarihiniz, açılımlarınız, notlarınız ve ayarlarınız yalnızca cihazınızda saklanır.
-        Bizim sunucumuz yoktur; bu verilere erişemeyiz.</li>
+      <li>Adınız, doğum tarihiniz, açılımlarınız, notlarınız ve ayarlarınız yalnızca cihazınızda saklanır;
+        bu verilere erişemeyiz.</li>
+      <li>Yalnızca bir açılım için Lyra&rsquo;dan (yapay zekâ tarot yorumcusu) yorum istediğinizde o açılımın kartları,
+        pozisyonları ve sorunuz yorumu üretmek için sunucumuza ve yapay zekâ sağlayıcısına gönderilir. Adınız gönderilmez;
+        üretilen yorum size ya da cihazınıza bağlanmadan bir süre saklanabilir (aşağıda).</li>
       <li>Uygulamada analiz veya izleme aracı yoktur.</li>
       <li>Tarolya ücretsizdir ve Google AdMob reklamlarıyla desteklenir. Reklamlar için reklam kimliği gibi
         cihaz verileri Google&rsquo;a gider; açılımlarınız, notlarınız ve kişisel bilgileriniz reklam ağına gönderilmez.</li>
@@ -112,7 +115,34 @@
   kimliği, bitiş tarihi) okur ve cihazda saklar. Ödeme bilgilerinizi biz görmeyiz ve saklamayız. Abonelik koşulları:
   <a href="kosullar.html">Kullanım Koşulları</a>.</p>
 
-  <p><strong>3. Paylaşım.</strong> Bir kartı veya açılımı paylaştığınızda uygulama bir görsel oluşturur ve
+  <p><strong>3. Yapay zekâ tarot yorumcusu (Lyra).</strong> Bir açılım için Lyra&rsquo;nın yorumunu istediğinizde
+  (derin yorum açıkken &laquo;Lyra&rsquo;ya yorumlat&raquo;) şu bilgiler Tarolya yapay zekâ sunucusuna gönderilir:</p>
+  <table>
+    <thead><tr><th>Veri</th><th>Açıklama</th></tr></thead>
+    <tbody>
+      <tr><td>Açılım ve kartlar</td><td>Açılımın adı, çekilen kartlar, düz/ters konumları, pozisyonları ve uygulamanın bu kartlar için gösterdiği anlam metinleri</td></tr>
+      <tr><td>Sorunuz (isteğe bağlı)</td><td>Açılıma yazdığınız soru; boş bıraktıysanız gönderilmez</td></tr>
+      <tr><td>Rastgele kurulum kimliği</td><td>Uygulamanın ürettiği, kişisel bilgi içermeyen kimlik; günlük yorum sınırını uygulamak için</td></tr>
+      <tr><td>Satın alma kimliği (yalnızca Tarolya+ aboneleri)</td><td>Aboneliğin geçerliliğini Google Play&rsquo;den doğrulamak için</td></tr>
+    </tbody>
+  </table>
+  <p>Sunucu Cloudflare altyapısında çalışır ve yorumu üretmek için bu bilgileri Anthropic&rsquo;in Claude API&rsquo;sine
+  (Lyra) ya da Tarolya+ abonelerinin Lyra+ derin analizlerinde Google&rsquo;ın Gemini API&rsquo;sine (ücretli katman;
+  içerik Google tarafından saklanmaz ve model eğitiminde kullanılmaz) iletir. <strong>Yanıt önbelleği:</strong> aynı
+  açılım, aynı kartlar (konumlarıyla) ve aynı soru için üretilen yorum en fazla 30 gün saklanır ve bu süre içinde aynı
+  kartları aynı soruyla soran kişilere (siz dahil) yeniden gösterilebilir. Önbellekte sorunuzun kendisi değil,
+  açılım-kart-soru bilgisinin geri döndürülemez özeti (hash) anahtar olarak tutulur; yorum metni hiçbir cihaz
+  kimliğine, satın alma kimliğine ya da kişiye bağlanmaz, ancak sorunuza değinebilir. Bunun dışında sunucu soru ve
+  yanıtları kaydetmez; yalnızca teknik hata kayıtları tutulur. Kötüye kullanımı önlemek için kurulum kimliğiyle günlük yorum sayısı en fazla
+  24 saat, Tarolya+ abonelerinde aylık Lyra+ hakkını saymak için satın alma kimliğinin geri döndürülemez özeti (hash)
+  en fazla 32 gün tutulur. Lyra&rsquo;nın bir yanıtını uygulamada <strong>bildirirseniz</strong>, açılımın adı, sorunuz,
+  yanıt metni, seçtiğiniz neden ve kurulum kimliği incelenmek üzere en fazla 90 gün saklanır. Lyra&rsquo;nın yanıtı
+  cihazınızda, açılımınızla birlikte saklanır. Lyra&rsquo;yı kullanmazsanız bu verilerin hiçbiri gönderilmez; sunucuya
+  ulaşılamazsa uygulama kartların cihazda üretilen klasik yorumunu gösterir.
+  Anthropic&rsquo;in koşulları: <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>,
+  Google Gemini API koşulları: <a href="https://ai.google.dev/gemini-api/terms">ai.google.dev/gemini-api/terms</a>.
+  Lyra bir yapay zekâdır; yanıtları hatalı olabilir ve kesinlik taşımaz.</p>
+  <p><strong>4. Paylaşım.</strong> Bir kartı veya açılımı paylaştığınızda uygulama bir görsel oluşturur ve
   cihazınızın paylaşım menüsünü açar. Görsel yalnızca seçtiğiniz uygulamaya gider; bize gönderilmez.</p>
 
   <p>Bunların dışında uygulama internete veri göndermez. Her internet isteğinde olduğu gibi, ilgili servisler
