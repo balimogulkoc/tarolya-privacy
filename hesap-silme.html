@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tarolya · Hesap ve Veri Silme</title>
+<meta name="description" content="Tarolya hesabınızı ve buluttaki yedeğinizi nasıl sileceğiniz." />
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f7f5fc;
+    --text: #17161f;
+    --muted: #5b5870;
+    --line: #e3e0ef;
+    --accent: #6d4aff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b1030;
+      --surface: #151a40;
+      --text: #f2f1f7;
+      --muted: #a9a5c0;
+      --line: #2a2f55;
+      --accent: #f4c86a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 0 16px;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 0 72px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; }
+  h2 { font-size: 20px; margin: 36px 0 10px; }
+  .date { color: var(--muted); font-size: 14px; margin-bottom: 28px; }
+  p, li { color: var(--text); }
+  a { color: var(--accent); }
+  .box { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin: 20px 0; }
+  .box ul { margin: 0; padding-left: 20px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Tarolya Hesap ve Veri Silme</h1>
+  <p class="date">Son güncelleme: 16 Kasım 2026</p>
+
+  <p>Tarolya, Velaris Labs tarafından geliştirilmiştir. Uygulamayı hesapsız kullanabilirsiniz; hesap yalnızca
+  <strong>Google ile giriş yaparak bulut yedeğini açtıysanız</strong> vardır. Bu sayfa hesabınızı ve onunla
+  ilişkili verilerin nasıl silineceğini anlatır.</p>
+
+  <div class="box">
+    <strong>Yöntem 1: Uygulamadan (anında)</strong>
+    <ul>
+      <li>Tarolya&rsquo;yı açın &rarr; <em>Günlük</em> sekmesinden <em>Ayarlar</em>&rsquo;a gidin.</li>
+      <li><em>Hesap</em> bölümünde <em>Hesabı sil</em>&rsquo;e dokunun ve onaylayın.</li>
+      <li>Hesabınız ve buluttaki tüm yedeğiniz anında ve kalıcı olarak silinir. Güvenlik için Google sizden hesabı yeniden doğrulamanızı isteyebilir.</li>
+      <li>Tarolya&rsquo;nın Google ile giriş altyapısı, aynı geliştiricinin Astelya uygulamasıyla ortaktır. Aynı Google hesabıyla Astelya&rsquo;yı da kullanıyorsanız, oradaki hesabınız bozulmasın diye ortak giriş kaydınız silinmez; Tarolya yedeğiniz yine silinir ve Tarolya&rsquo;da oturumunuz kapatılır. Giriş kaydının da silinmesini isterseniz Astelya&rsquo;dan hesabınızı silebilir ya da aşağıdaki e-posta yoluyla bize yazabilirsiniz.</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <strong>Yöntem 2: Uygulamaya erişemiyorsanız (e-posta ile)</strong>
+    <ul>
+      <li>Giriş yaptığınız Google hesabının e-posta adresinden <a href="mailto:velarislabstudio@gmail.com?subject=Tarolya%20hesap%20silme">velarislabstudio@gmail.com</a> adresine &laquo;Tarolya hesap silme&raquo; konulu bir e-posta gönderin.</li>
+      <li>Kimliğinizi doğrulamak için e-postanın, hesabın Google e-posta adresinden gelmesi gerekir.</li>
+      <li>Talebiniz en geç 30 gün içinde, çoğunlukla birkaç iş günü içinde sonuçlandırılır ve size bildirilir.</li>
+    </ul>
+  </div>
+
+  <h2>Neler silinir?</h2>
+  <table>
+    <thead><tr><th>Veri</th><th>Sonuç</th></tr></thead>
+    <tbody>
+      <tr><td>Hesabınız (Google ile giriş kaydı, e-posta adresi, kullanıcı kimliği)</td><td>Kalıcı olarak silinir. Astelya&rsquo;yı da aynı Google hesabıyla kullanıyorsanız ortak giriş kaydı Astelya hesabınız için korunur (yukarıya bakın)</td></tr>
+      <tr><td>Buluttaki yedek: açılım geçmişi, Lyra yorumları, günlük ve rüya kayıtları, ayarlar, ad ve doğum tarihi (girdiyseniz), yıldız ve ilerleme bilgisi</td><td>Kalıcı olarak silinir</td></tr>
+      <tr><td>Bu cihazdaki veriler</td><td>Silinmez; uygulamayı kaldırarak ya da <em>Ayarlar &rarr; Tüm verileri sil</em> ile kaldırabilirsiniz</td></tr>
+      <tr><td>Google Play satın alma kayıtları</td><td>Google Play&rsquo;de tutulur; bizim silme yetkimiz yoktur. Abonelikler Google Play&rsquo;den yönetilir</td></tr>
+      <tr><td>Hediye derin yorum kaydı (yapay zekâ sunucusunda)</td><td>Silinmez: hediyenin bir kez kullanılabilmesi için kurulum kimliği ve kullanıcı kimliğinizin geri döndürülemez özeti en fazla 10 yıl tutulur (kimliğin kendisi saklanmaz)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Ne kadar süre saklanır?</h2>
+  <p>Silme işleminden sonra hesabınız ve yedeğiniz için yedek kopya tutmayız. Yapay zekâ yorumlarının geri dönüştürülemeyen
+  özetle anahtarlanmış 30 günlük yanıt önbelleği ve hata bildirimleri (en fazla 90 gün) bir kişiye ya da hesaba bağlı
+  değildir. Kötüye kullanımı önlemek için, hediye derin yorumu kullandıysanız bunun işareti (kurulum kimliği ve
+  kullanıcı kimliğinizin tuzlu, geri döndürülemez özeti) en fazla 10 yıl saklanır; bu özetten kimliğiniz ya da
+  e-posta adresiniz elde edilemez. Ayrıntılar <a href="./">Gizlilik Politikası</a>&rsquo;ndadır. Hesabı silmeden önce uygulamadan çıkış
+  yapmanız, bu cihazdaki verilerinizi etkilemez.</p>
+
+  <footer>Velaris Labs · <a href="./">Gizlilik Politikası</a> · <a href="kosullar.html">Kullanım Koşulları</a> ·
+  <a href="mailto:velarislabstudio@gmail.com">velarislabstudio@gmail.com</a></footer>
+</main>
+</body>
+</html>

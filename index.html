@@ -49,7 +49,7 @@
 <body>
 <main>
   <h1>Tarolya Gizlilik Politikası</h1>
-  <p class="date">Son güncelleme: 7 Kasım 2026</p>
+  <p class="date">Son güncelleme: 16 Kasım 2026</p>
 
   <p>Tarolya (&laquo;uygulama&raquo;), Velaris Labs tarafından geliştirilmiştir. Bu politika,
   uygulamanın hangi verileri işlediğini ve neden işlediğini açıklar.</p>
@@ -57,7 +57,7 @@
   <div class="box">
     <strong>Kısaca</strong>
     <ul>
-      <li>Hesap açmanız gerekmez; uygulamanın tamamı girişsiz çalışır.</li>
+      <li>Hesap açmanız gerekmez; uygulamanın tamamı girişsiz çalışır. İsterseniz Google ile giriş yapıp verilerinizi buluta yedekleyebilirsiniz (aşağıda); hesabınızı ve yedeğinizi uygulamadan ya da <a href="hesap-silme.html">hesap silme sayfasından</a> istediğiniz an silebilirsiniz.</li>
       <li>Adınız, doğum tarihiniz, açılımlarınız, notlarınız ve ayarlarınız yalnızca cihazınızda saklanır;
         bu verilere erişemeyiz.</li>
       <li>Yalnızca bir açılım için Lyra&rsquo;dan (yapay zekâ tarot yorumcusu) yorum istediğinizde o açılımın kartları,
@@ -84,7 +84,7 @@
     </tbody>
   </table>
   <p>Bu verileri uygulamayı kaldırarak veya cihaz ayarlarından uygulama verisini silerek tamamen kaldırabilirsiniz.
-  Uygulama bulut yedeği tutmaz; cihaz değiştirdiğinizde veriler yeni cihaza kendiliğinden taşınmaz.</p>
+  Google ile giriş yapıp bulut yedeğini açmadıkça veriler cihazınızdan çıkmaz ve cihaz değiştirdiğinizde yeni cihaza kendiliğinden taşınmaz.</p>
 
   <h2>Cihaz dışına giden veriler</h2>
   <p><strong>1. Reklamlar (Google AdMob).</strong> Uygulamada Google AdMob reklamları gösterilir: Bugün ekranında,
@@ -124,6 +124,7 @@
       <tr><td>Sorunuz (isteğe bağlı)</td><td>Açılıma yazdığınız soru; boş bıraktıysanız gönderilmez</td></tr>
       <tr><td>Rastgele kurulum kimliği</td><td>Uygulamanın ürettiği, kişisel bilgi içermeyen kimlik; günlük yorum sınırını uygulamak için</td></tr>
       <tr><td>Satın alma kimliği (yalnızca Tarolya+ aboneleri)</td><td>Aboneliğin geçerliliğini Google Play&rsquo;den doğrulamak için</td></tr>
+      <tr><td>Hesap jetonu (yalnızca Google ile giriş yaptıysanız)</td><td>Kullanıcı kimliğinizi doğrulamak ve hediye derin yorum hakkını hesabınıza bağlamak için; sunucu jetonu ve kimliğin kendisini saklamaz, yalnızca kimliğin geri döndürülemez özetini tutar</td></tr>
     </tbody>
   </table>
   <p>Sunucu Cloudflare altyapısında çalışır ve yorumu üretmek için bu bilgileri Anthropic&rsquo;in Claude API&rsquo;sine
@@ -135,7 +136,10 @@
   kimliğine, satın alma kimliğine ya da kişiye bağlanmaz, ancak sorunuza değinebilir. Bunun dışında sunucu soru ve
   yanıtları kaydetmez; yalnızca teknik hata kayıtları tutulur. Kötüye kullanımı önlemek için kurulum kimliğiyle günlük yorum sayısı en fazla
   24 saat, Tarolya+ abonelerinde aylık Lyra+ hakkını saymak için satın alma kimliğinin geri döndürülemez özeti (hash)
-  en fazla 32 gün tutulur. Lyra&rsquo;nın bir yanıtını uygulamada <strong>bildirirseniz</strong>, açılımın adı, sorunuz,
+  en fazla 32 gün tutulur. Hediye derin yorumun bir kez kullanılabilmesi için, kullandıysanız kurulum kimliği ve (giriş
+  yaptıysanız) kullanıcı kimliğinizin tuzlu, geri döndürülemez özeti hediyenin yazıldığı yorumun önbellek anahtarıyla
+  birlikte en fazla 10 yıl tutulur; bu kayıt hesap silindiğinde silinmez, ancak özetten kimliğiniz ya da e-posta
+  adresiniz elde edilemez. Lyra&rsquo;nın bir yanıtını uygulamada <strong>bildirirseniz</strong>, açılımın adı, sorunuz,
   yanıt metni, seçtiğiniz neden ve kurulum kimliği incelenmek üzere en fazla 90 gün saklanır. Lyra&rsquo;nın yanıtı
   cihazınızda, açılımınızla birlikte saklanır. Lyra&rsquo;yı kullanmazsanız bu verilerin hiçbiri gönderilmez; sunucuya
   ulaşılamazsa uygulama kartların cihazda üretilen klasik yorumunu gösterir.
@@ -144,6 +148,36 @@
   Lyra bir yapay zekâdır; yanıtları hatalı olabilir ve kesinlik taşımaz.</p>
   <p><strong>4. Paylaşım.</strong> Bir kartı veya açılımı paylaştığınızda uygulama bir görsel oluşturur ve
   cihazınızın paylaşım menüsünü açar. Görsel yalnızca seçtiğiniz uygulamaya gider; bize gönderilmez.</p>
+
+  <p><strong>5. Google ile giriş ve bulut yedeği (isteğe bağlı).</strong> Kurulumda ya da Ayarlar &rarr; Hesap bölümünden
+  Google ile giriş yaparsanız Google hesabınızın <strong>e-posta adresi</strong>, adı ve profil fotoğrafı ile Firebase
+  Authentication&rsquo;ın ürettiği <strong>kullanıcı kimliği</strong> hesabınızı tanımak için işlenir. Giriş altyapısı
+  (Firebase projesi) aynı geliştiricinin Astelya uygulamasıyla ortaktır: aynı Google hesabıyla iki uygulamaya da giriş
+  yaparsanız kullanıcı kimliğiniz aynıdır, ama her uygulamanın yedeği ayrı tutulur. Tarolya, Astelya yedeğinizin içeriğini
+  okumaz; yalnızca hesap silerken böyle bir yedeğin bulunup bulunmadığına bakar (aşağıya bakın). Giriş yaptığınızda
+  aşağıdaki veriler Google Firebase (Cloud Firestore, Google LLC) üzerinde, yalnızca sizin hesabınıza bağlı ve yalnızca sizin
+  okuyup yazabileceğiniz bir alanda yedeklenir:</p>
+  <table>
+    <thead><tr><th>Yedeklenen veri</th><th>Neden</th></tr></thead>
+    <tbody>
+      <tr><td>Açılım geçmişiniz ve açılımlara bağlı Lyra yorumları, notlarınız</td><td>Cihaz değiştirince ya da uygulamayı silince geri getirmek</td></tr>
+      <tr><td>Günün kartı, favori kartlar, günlük ve rüya kayıtları, özel açılımlar</td><td>Aynı</td></tr>
+      <tr><td>Ayarlar ve tema; ad, doğum tarihi ve ilgi alanları (girdiyseniz)</td><td>Aynı</td></tr>
+      <tr><td>Yıldız bakiyesi, günlük sayaçlar, seri ve ilerleme</td><td>Aynı; yıldızlar geri yüklemede toplanmaz (cihazda zaten veri varsa iki bakiyeden düşük olanı kalır)</td></tr>
+    </tbody>
+  </table>
+  <p>Abonelik durumunuz yedeklenmez; Google Play&rsquo;den okunur. Giriş yaptıysanız Lyra isteklerine kimliğinizi doğrulayan
+  bir Firebase jetonu eklenir; sunucu bu jetonla yalnızca kullanıcı kimliğinizi doğrular ve hediye derin yorum hakkının bir
+  kez kullanılmasını, kimliğin geri döndürülemez özetiyle hesabınıza bağlar. Yedek otomatik olarak (değişikliklerden kısa süre sonra) ya da &laquo;Şimdi
+  yedekle&raquo; ile alınır; otomatik yedeği Ayarlar&rsquo;dan kapatabilirsiniz. Bu veriler reklam, analiz ya da
+  profil çıkarma için kullanılmaz ve üçüncü kişilerle paylaşılmaz; aktarım sırasında şifrelenir (TLS).</p>
+  <p><strong>Hesabınızı ve verilerinizi silme.</strong> Uygulamada Ayarlar &rarr; Hesap &rarr; <em>Hesabı sil</em> ile hesabınızı
+  ve buluttaki tüm yedeğinizi anında ve kalıcı olarak silebilirsiniz; bu işlem geri alınamaz, cihazınızdaki veriler kalır.
+  Aynı Google hesabıyla Astelya&rsquo;yı da kullanıyorsanız, oradaki hesabınız bozulmasın diye ortak giriş kaydı silinmez;
+  Tarolya yedeğiniz yine silinir ve Tarolya&rsquo;da oturumunuz kapatılır. Giriş kaydının da silinmesini isterseniz
+  Astelya&rsquo;dan hesabınızı silebilir ya da bize yazabilirsiniz. Uygulamaya erişemiyorsanız <a href="hesap-silme.html">hesap silme sayfasındaki</a> adımlarla bize yazarak silinmesini
+  isteyebilirsiniz; talebiniz en geç 30 gün içinde sonuçlandırılır. Giriş yapmadıysanız bulutta verinizi tutmadığımız için
+  silinecek bir şey yoktur.</p>
 
   <p>Bunların dışında uygulama internete veri göndermez. Her internet isteğinde olduğu gibi, ilgili servisler
   IP adresinizi görür.</p>
